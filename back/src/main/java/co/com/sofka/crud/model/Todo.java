@@ -14,6 +14,13 @@ public class Todo {
     @ManyToOne(fetch = FetchType.LAZY)
     private ToDoList todolist;
 
+    public ToDoList getTodolist() {
+        return todolist;
+    }
+
+    public void setTodolist(ToDoList todolist) {
+        this.todolist = todolist;
+    }
 
     public String getGroupListId() {
         return groupListId;
