@@ -63,3 +63,5 @@ Se reorganizan las clases dentro de paquetes de acuerdo a su funcionalidad dentr
 Se agrega la entidad ToDoList que almacenará los listados de las tareas ToDo.
 
 Se agregaron las relaciones entre las entidades de uno a muchos y muchos a uno.
+
+Se agrega la Clase DTO que será la encargada de la transferencia de datos cliente-servidor
