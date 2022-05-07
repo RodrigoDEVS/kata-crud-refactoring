@@ -58,3 +58,6 @@ En el proyecto se pueden evidenciar los siguientes cambios realizados con el fin
 
 Se reorganizan las clases dentro de paquetes de acuerdo a su funcionalidad dentro del programa
 
+Se agrega la entidad ToDoList que almacenará los listados de las tareas ToDo.
+
+
