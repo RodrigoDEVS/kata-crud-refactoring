@@ -47,3 +47,14 @@ Realizar la siguiente representación donde se tiene TO-Do List agripado en list
 
 ![alt text]( ./todo-list-kata.gif "Demo funcional del ToDo List")
 
+
+# [Solución. Backend] 
+
+## Mejoras Implementadas
+
+En el proyecto se pueden evidenciar los siguientes cambios realizados con el fin de mejorar la aplicación:
+
+### Refactorización y Funcionalidad
+
+Se reorganizan las clases dentro de paquetes de acuerdo a su funcionalidad dentro del programa
+
