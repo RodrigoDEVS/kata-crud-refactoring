@@ -54,10 +54,12 @@ Realizar la siguiente representación donde se tiene TO-Do List agripado en list
 
 En el proyecto se pueden evidenciar los siguientes cambios realizados con el fin de mejorar la aplicación:
 
-### Refactorización y Funcionalidad
+### Refactorización
 
 Se reorganizan las clases dentro de paquetes de acuerdo a su funcionalidad dentro del programa
 
+### Implementación
+
 Se agrega la entidad ToDoList que almacenará los listados de las tareas ToDo.
 
-
+Se agregaron las relaciones entre las entidades de uno a muchos y muchos a uno.
