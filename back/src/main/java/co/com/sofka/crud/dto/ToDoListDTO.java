@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class ToDoListDTO implements Serializable {
 
-    private static final Long serialVersionUID = 1l;
+    private static final Long serialVersionUID = 1L;
     private Integer id;
     private String name;
     private List<Todo> todos;
