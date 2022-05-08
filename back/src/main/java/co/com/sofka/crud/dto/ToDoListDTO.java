@@ -18,15 +18,15 @@ import java.util.List;
 public class ToDoListDTO implements Serializable {
 
     private static final Long serialVersionUID = 1L;
-    private Integer id;
+    private Long id;
     private String name;
     private List<Todo> todos;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

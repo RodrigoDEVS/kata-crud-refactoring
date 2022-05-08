@@ -19,17 +19,17 @@ public class ToDoList {
     /**Atributos de la Clase*/
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
     private String name;
     @OneToMany(mappedBy = "todolist", cascade = CascadeType.ALL)
     private List<Todo> todos;
 
     /**Getters y Setters*/
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
