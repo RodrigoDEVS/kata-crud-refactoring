@@ -27,8 +27,21 @@ public class ToDoListController {
         return toDoListService.create(todolist);
     }
 
+    @PutMapping(value = "api/todolist")
+    public ToDoListDTO update(@RequestBody ToDoListDTO todolist){
+        if(todolist.getId() != null){
+            return toDoListService.create(todolist);
+        }
+        throw new RuntimeException("No existe el id para actualziar");
+    }
+
     @GetMapping(value = "api/{id}/todolist")
     public ToDoListDTO get(@PathVariable("id") Long id){
         return toDoListService.get(id);
     }
+/*
+    @DeleteMapping(value = "api/{id}/todolist")
+    public void delete(@PathVariable("id")Long id){
+        toDoListService.delete(id);
+    }*/
 }

@@ -2,6 +2,7 @@ package co.com.sofka.crud.service;
 
 import co.com.sofka.crud.dto.ToDoListDTO;
 import co.com.sofka.crud.model.ToDoList;
+import co.com.sofka.crud.model.Todo;
 import co.com.sofka.crud.repository.ToDoListRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,12 +42,9 @@ public class ToDoListService {
         ToDoListDTO toDoListDTO = modelMapper.map(todolistEntity, ToDoListDTO.class);
         return toDoListDTO;
     }
-
-  /*
+/*
     public void delete(Long id){
-        toDoListRepo.delete(get(id));
-    }
-}*/
-
-
+        ToDoList todolistEntity = toDoListRepo.delete(get(id));
+        ToDoListDTO toDoListDTO = modelMapper.map(todolistEntity, ToDoListDTO.class);
+    }*/
 }
