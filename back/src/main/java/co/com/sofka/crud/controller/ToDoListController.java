@@ -39,9 +39,9 @@ public class ToDoListController {
     public ToDoListDTO get(@PathVariable("id") Long id){
         return toDoListService.get(id);
     }
-/*
+
     @DeleteMapping(value = "api/{id}/todolist")
     public void delete(@PathVariable("id")Long id){
         toDoListService.delete(id);
-    }*/
+    }
 }
