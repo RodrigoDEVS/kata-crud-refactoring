@@ -7,6 +7,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class ToDoListService {
 
@@ -22,4 +25,22 @@ public class ToDoListService {
         todolistEntity = toDoListRepo.save(todolistEntity);
         return modelMapper.map(todolistEntity, ToDoListDTO.class);
     }
+
+    public List<ToDoListDTO> listar(){
+        List<ToDoList> todolistEntity = (List<ToDoList>) toDoListRepo.findAll();
+        List<ToDoListDTO> toDoListDTOSet = new ArrayList<>();
+        for(ToDoList todolist: todolistEntity){
+            ToDoListDTO toDoListDTO = modelMapper.map(todolist, ToDoListDTO.class);
+            toDoListDTOSet.add(toDoListDTO);
+        }
+        return toDoListDTOSet;
+    }
+/*
+    public void delete(Long id){
+        toDoListRepo.delete(get(id));
+    }
+
+    public Todo get(Long id){
+        return toDoListRepo.findById(id).orElseThrow();
+    }*/
 }

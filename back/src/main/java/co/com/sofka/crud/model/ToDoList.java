@@ -21,7 +21,8 @@ public class ToDoList {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    @OneToMany(mappedBy = "todolist", cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "groupListId")
     private List<Todo> todos;
 
     /**Getters y Setters*/
