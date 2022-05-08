@@ -1,6 +1,8 @@
 package co.com.sofka.crud.controller;
 
 import co.com.sofka.crud.dto.ToDoListDTO;
+import co.com.sofka.crud.model.ToDoList;
+import co.com.sofka.crud.model.Todo;
 import co.com.sofka.crud.service.ToDoListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,5 +27,8 @@ public class ToDoListController {
         return toDoListService.create(todolist);
     }
 
-
+    @GetMapping(value = "api/{id}/todolist")
+    public ToDoListDTO get(@PathVariable("id") Long id){
+        return toDoListService.get(id);
+    }
 }

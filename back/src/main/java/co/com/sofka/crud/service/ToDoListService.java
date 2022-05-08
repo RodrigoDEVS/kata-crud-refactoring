@@ -35,12 +35,18 @@ public class ToDoListService {
         }
         return toDoListDTOSet;
     }
-/*
+
+    public ToDoListDTO get(Long id) {
+        ToDoList todolistEntity = toDoListRepo.findById(id).orElseThrow();
+        ToDoListDTO toDoListDTO = modelMapper.map(todolistEntity, ToDoListDTO.class);
+        return toDoListDTO;
+    }
+
+  /*
     public void delete(Long id){
         toDoListRepo.delete(get(id));
     }
+}*/
 
-    public Todo get(Long id){
-        return toDoListRepo.findById(id).orElseThrow();
-    }*/
+
 }

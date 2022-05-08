@@ -18,7 +18,7 @@ public class ToDoList {
 
     /**Atributos de la Clase*/
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
