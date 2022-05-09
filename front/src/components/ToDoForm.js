@@ -3,7 +3,7 @@ import { server } from "../context/Api";
 import { Button, Form } from 'react-bootstrap'
 import ToDoContext from "../context/ToDoContext";
 
-const ToDoForm = () => {
+const ToDoForm = (props) => {
 
   const { dispatch, state: { todo } } = useContext(ToDoContext)
 
@@ -18,10 +18,11 @@ const ToDoForm = () => {
     const request = {
       name: state.name,
       id: null,
-      completed: false
+      completed: false,
+      group_list_id: null,
     };
 
-    fetch(`${server}/todo`, {
+    fetch(`${server}/todolist`, {
       method: "POST",
       body: JSON.stringify(request),
       headers: {

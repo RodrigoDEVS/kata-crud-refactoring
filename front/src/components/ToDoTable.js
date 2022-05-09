@@ -8,9 +8,6 @@ const ToDoTable = () => {
 
   const { state, dispatch } = useContext(ToDoContext)
 
-  console.log("currentList:")
-  console.log(state.todo.list)
-
   useEffect(() => {
     fetch(`${server}/todos`)
       .then(response => response.json())

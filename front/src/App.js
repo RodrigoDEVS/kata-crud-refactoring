@@ -1,14 +1,18 @@
 import React from "react";
 import { ToDoProvider } from "./context/ToDoContext";
+import { ToDoListProvider } from "./context/ToDoListContext";
 import AppRouter from "./routers/AppRouter";
 
 
 function App() {
   return (
     <div>
-      <ToDoProvider>
-        <AppRouter />
-      </ToDoProvider>
+      <ToDoListProvider>
+        <ToDoProvider>
+          <AppRouter />
+        </ToDoProvider>
+      </ToDoListProvider>
+
     </div>
 
   );
