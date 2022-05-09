@@ -62,7 +62,7 @@ const ToDoForm = () => {
 
 
   return <div>
-    <Form className="container mt-5" ref={formRef}>
+    <Form className="container mt-2" ref={formRef}>
       <Form.Control type="text" name="name" defaultValue={item.name} onChange={(event) => {
         setState({ ...state, name: event.target.value })
       }} />
